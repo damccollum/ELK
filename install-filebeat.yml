@@ -14,7 +14,7 @@
     # Use copy module
   - name: Drop in filebeat.yml
     copy:
-      src: /etc/ansible/files/filebeat-config.yml
+      src: /etc/ansible/filebeat-config.yml
       dest: /etc/filebeat/filebeat.yml
 
     # Use command module
@@ -28,3 +28,10 @@
     # Use command module
   - name: Start filebeat service
     command: service filebeat start
+
+    # Start filebeat on boot
+  - name: enable service filebeat on boot
+    systemd:
+      name: filebeat
+      enabled: yes
+
