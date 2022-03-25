@@ -1,4 +1,4 @@
-# ELK
+# Project 1 - ELK Stack
 Building an ELK stack
 
 Network Diagram
